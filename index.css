@@ -1,0 +1,183 @@
+body {
+
+    background: linear-gradient(#141e30, #243b55);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    margin-top: 30px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 600px 200px;
+}
+
+#login-register-container {
+    grid-area: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1 {
+        text-align: center;
+    }
+
+    & form {
+        margin: auto auto;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        width: 300px;
+
+        & input {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        & button {
+            margin: auto;
+            width: 150px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        & #submit-btn {
+            margin-top: 10px;
+            background-color: orchid;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-size: 16px;
+
+            &:hover {
+                background-color: white;
+                color: orchid;
+            }
+        }
+
+        & #log-reg-btn {
+            background: none;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#thoughts-container {
+    box-sizing: border-box;
+    grid-area: span 2 / 1;
+    padding: 10px 0;
+    height: 500px;
+    /* border: 1px solid white; */
+    overflow: scroll;
+
+}
+
+
+.thought-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 7px 3px 5px orchid;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.thought-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.thought-card p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+#post-thoughts-container {
+    grid-area: 1 / 1;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+}
+
+#thought-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#post-thought-btn {
+    padding: 10px 20px;
+    background: linear-gradient(#141e30, #243b55);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pulse-button {
+    box-shadow: 0px 1px 10px orchid;
+    animation: pulseButton 2s infinite;
+}
+
+@keyframes pulseButton {
+    20% {
+        box-shadow: 0px 1px 20px orchid;
+    }
+
+    40% {
+        box-shadow: 0px 1px 10px orchid;
+    }
+
+    60% {
+        box-shadow: 0px 1px 20px orchid;
+    }
+
+    80% {
+        box-shadow: 0px 1px 10px orchid;
+    }
+}
+
+#friends-container {
+    grid-area: 2 /2;
+    padding-left: 10px;
+    color: orchid;
+}
+
+#friends-container>li {
+    color: white;
+    list-style: none;
+    font-size: 18px;
+}
+
+#request-friend-container {
+    grid-area: 3 /2;
+    padding-left: 10px;
+    color: orchid;
+}
+
+#request-friend-container>div {
+    display: flex;
+    gap: 10px;
+    color: white;
+    padding: 10px;
+
+    & h3 {
+        margin: 0;
+    }
+}
+
+#group-container {}
